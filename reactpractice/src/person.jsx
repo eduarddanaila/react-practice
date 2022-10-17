@@ -1,13 +1,6 @@
-function Person() {
-    const me = {
-        name: "Eduard",
-        age : 29,
-    }
-    return (
-        <div>
-            <p>Name: {me.name}</p>
-            <p>Age: {me.age}</p>
-        </div>
+const Person = (props) =>{
+    return(
+        <p>This is {props.name}, they are from {props.city}</p>
     )
 }
 export default Person;
