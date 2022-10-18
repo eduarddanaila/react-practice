@@ -1,20 +1,22 @@
+/* eslint-disable no-console */
 import axios from 'axios';
 import { useState } from 'react';
-import Film from '../src/Film';
+import Film from './Film.jsx';
 
-const key = "da5e432d"
+const key = 'da5e432d';
 
 function OMDB() {
-    const [title, setTitle] = useState('');
-    const [films, setFilms] = useState([]);
+  const [title, setTitle] = useState('');
+  const [films, setFilms] = useState([]);
 
-    const searchFilms = async () => {
-        const res = await axios.get(`http://www.omdbapi.com/?apikey=${key}&s=${title}`);
-        console.log('RES:', res);
-        setFilms(res.data.Search);
-    };
+  const searchFilms = async () => {
+    const res = await axios.get(`http://www.omdbapi.com/?apikey=${key}&s=${title}`);
+    console.log('RES:', res);
+    setFilms(res.data.Search);
+  };
 
-    return (
+  return (
+
         <label htmlFor="movieTitle">
             Title:
             <input id="movieTitle" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -26,10 +28,11 @@ function OMDB() {
                         title={film.Title}
                         year={film.Year}
                         poster={film.Poster}
-                    />
+                        />
                 ))
             }
-        </label>
-    );
+       </label>
+
+  );
 }
 export default OMDB;
