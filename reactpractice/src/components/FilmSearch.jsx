@@ -32,7 +32,6 @@ function OMDB() {
                 ))
             }
        </label>
-
   );
 }
 export default OMDB;

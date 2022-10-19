@@ -42,7 +42,8 @@ function SearchableList() {
                         <button type="button" onClick={() => removeItem(i)}>X</button>
                     </p>
                   ))
-            }
+                }
+
         </div>
   );
 }

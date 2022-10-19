@@ -1,15 +1,11 @@
-const Hello = props => {
-    return (
+const Hello = (props) => (
         <h1>Hello, {props.name}</h1>
-    );
-    }
-const PropComp = () => {
-    return (
+);
+const PropComp = () => (
         <>
             <Hello name="Chris" />
             <Hello name="P." />
             <Hello name="Bacon" />
         </>
-    )
-}
-export default PropComp
+);
+export default PropComp;

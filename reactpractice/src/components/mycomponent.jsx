@@ -1,6 +1,6 @@
-import ComponentWithProps from '../src/ComponentWithProps'
-const MyComponent = () => {
-    return (
+import ComponentWithProps from '../src/ComponentWithProps';
+
+const MyComponent = () => (
         <>
         <h1>Hello World</h1>
         <h2>Good Day</h2>
@@ -10,6 +10,5 @@ const MyComponent = () => {
         number={10}
         nonexistent="something that doesn't exist"/>
         </>
-    );
-}
+);
 export default MyComponent;
